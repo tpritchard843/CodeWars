@@ -5,14 +5,15 @@
 // The format of the strings will always be Europe and JavaScript.
 // All data will always be valid and uniform as in the example above.
 
-function countDevelopers(list) {
-  // loop through the list of objects
-  // check for developers from Europe
-  // check for javascript developers
-   let filteredList =  list.filter( dev => dev.language === 'JavaScript').filter( dev => dev.continent === 'Europe');
-  // return the count
-  return filteredList.length;
-}
+// function countDevelopers(list) {
+//   // loop through the list of objects
+//   // check for developers from Europe
+//   // check for javascript developers
+//    let filteredList =  list.filter( dev => dev.language === 'JavaScript').filter( dev => dev.continent === 'Europe');
+//   // return the count
+//   return filteredList.length;
+// }
+const countDevelopers = list => list.filter( dev => dev.language === 'JavaScript').filter( dev => dev.continent === 'Europe').length;
 
 //examples
 const list1 = [
