@@ -3,13 +3,17 @@
 // Write a function that flattens an Array of Array objects into a flat Array.
 // Your function must only do one level of flattening.
 
+// var flatten = function (array){
+//   // loop through array of objects
+//   // add the items from the objects to a results array --> nested loop
+//   // return the results array
+//   return array.reduce(function(a,c) {
+//     return a.concat(c);
+//   }, []);
+// }
+
 var flatten = function (array){
-  // loop through array of objects
-  // add the items from the objects to a results array --> nested loop
-  // return the results array
-  return array.reduce(function(a,c) {
-    return a.concat(c);
-  }, []);
+  return [].concat.apply([],array);
 }
 
 console.log(flatten([]), []);
