@@ -3,14 +3,16 @@
 // Simple, given a string of words, return the length of the shortest word(s).
 // String will never be empty and you do not need to account for different data types.
 
-function findShort(str){
-  // split words into an array
-  let wordsArr = str.split(' ');
-  // iterate over the array and sort by length
-  let sortedWords = wordsArr.slice().sort((a,b) => a.length-b.length);
-  // return shortest word .length
-  return sortedWords[0].length;
-}
+// function findShort(str){
+//   // split words into an array
+//   let wordsArr = str.split(' ');
+//   // iterate over the array and sort by length
+//   let sortedWords = wordsArr.slice().sort((a,b) => a.length-b.length);
+//   // return shortest word .length
+//   return sortedWords[0].length;
+// }
+
+const shortestWord = str => Math.min(...str.split(" ").map (str => str.length));
 
 // examples
 console.log(findShort("bitcoin take over the world maybe who knows perhaps"), 3);
