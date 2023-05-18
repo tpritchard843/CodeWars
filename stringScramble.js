@@ -3,10 +3,12 @@
 // put the first character in the string at the index described by the first element of the array and so forth
 // You can assume that you will be given a string and array of equal length and both containing valid characters (A-Z, a-z, or 0-9).
 
-function scramble(str, arr) {
-  // map str to array with corresponding values
-  return arr.map((_, i) => str[arr.indexOf(i)]).join('');
-}
+// function scramble(str, arr) {
+//   // map str to array with corresponding values
+//   return arr.map((_, i) => str[arr.indexOf(i)]).join('');
+// }
+
+const scrambledString = (str, arr) => arr.map((_, i) => str[arr.indexOf(i)]).join('');
 
 // examples
 console.log(scramble('abcd', [0,3,1,2]), 'acdb', "Should return acdb");
