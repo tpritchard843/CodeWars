@@ -3,14 +3,19 @@
 // The string may contain any of the 128 ASCII characters.
 // Characters are case-sensitive, e.g. 'a' and 'A' are considered different characters.
 
-function hasUniqueChars(str){
-  // split string into an array
-  const charactersArr = str.split('');
-  // test every character with a callback fn that checks for uniqueness
-  return charactersArr.every(function(char, i, arr) {
-    // if first occurence is equal to the current occurence, we know a character is unique
-    return arr.indexOf(char) == i;
-  });
+// function hasUniqueChars(str){
+//   // split string into an array
+//   const charactersArr = str.split('');
+//   // test every character with a callback fn that checks for uniqueness
+//   return charactersArr.every(function(char, i, arr) {
+//     // if first occurence is equal to the current occurence, we know a character is unique
+//     return arr.indexOf(char) == i;
+//   });
+// }
+
+// const hasUniqueChars = str => new Set(...str).size === str.length;
+function hasUniqueChars(str) {
+  return new Set(...str).size === str.length;
 }
 
 // Examples
