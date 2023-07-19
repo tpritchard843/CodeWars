@@ -11,7 +11,7 @@ function transposeTwoStrings (arr) {
     return result.join('\n')
 }
 
-//console.log(transposeTwoStrings(['joey', 'louise']))
+console.log(transposeTwoStrings(['joey', 'louise']))
 
 
 // 7kyu Tube strike options calculator
@@ -19,13 +19,10 @@ function calculator(distance, busDrive, busWalk)  {
     let walkTime = (distance / 5)
     let busTime = ((busDrive / 8) + (busWalk / 5))
 
-    console.log(walkTime)
-    console.log(busTime)
-    if (walkTime > busTime && walkTime >= (1/6) || walkTime > 2) {
-        return 'Bus'
-    } else if (walkTime < busTime || walkTime === busTime || walkTime < (1/6)) {
-        return 'Walk'
-    }
+    if (walkTime < 1/6) return 'Walk'
+    if (walkTime > 2) return 'Bus'
+
+    return walkTime <= busTime ? 'Walk' : 'Bus'
 }
 
 console.log(calculator(5,6,1))
