@@ -3,14 +3,13 @@
 // The function must return an ordered list containing the indexes of all capital letters in the string
 
 const capitals = word => {
-    let lettersArr = word.split('')
     let result = [];
 
-    lettersArr.forEach( (letter, i) => {
-        if (letter === letter.toUpperCase()) {
+    for (let i = 0; i < word.length; i++) {
+        if (word[i] === word[i].toUpperCase()) {
             result.push(i);
         }
-    })
+    }
     return result;
 }
 
