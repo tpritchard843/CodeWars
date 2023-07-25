@@ -25,3 +25,21 @@ function tram(stops, descending, onboarding){
 }
 
 console.log(tram(4, [0, 2, 4, 4], [3, 5, 2, 0]));
+
+
+
+//7kyu two numbers are positive
+// write a function which takes in three integers and returns true if two of them are positive
+function twoArePositive(a, b, c) {
+    let numbersArr = [a,b,c];
+    let positiveCount = 0;
+    numbersArr.forEach (elem => {
+        if (elem > 0) positiveCount++;
+    })
+    if (positiveCount == 2) {
+        return true;
+    }
+    return false;
+}
+
+console.log(twoArePositive(2, 4, -3)) // true
