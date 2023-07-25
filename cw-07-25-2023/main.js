@@ -7,7 +7,7 @@ function shuffleIt(arr, ...swaps) {
     return arr;
 }
 
-console.log(shuffleIt([1,2,3,4,5],[1,2])) // returns [1,3,2,4,5] 
+//console.log(shuffleIt([1,2,3,4,5],[1,2])) // returns [1,3,2,4,5] 
 
 // 7kyu Tram capacity
 function tram(stops, descending, onboarding){
@@ -24,7 +24,7 @@ function tram(stops, descending, onboarding){
     return max; // return max capacity
 }
 
-console.log(tram(4, [0, 2, 4, 4], [3, 5, 2, 0]));
+//console.log(tram(4, [0, 2, 4, 4], [3, 5, 2, 0]));
 
 
 
@@ -34,4 +34,41 @@ function twoArePositive(a, b, c) {
     return [...arguments].filter(elem => elem > 0).length === 2;
 }
 
-console.log(twoArePositive(2, 4, -3)); // true
+//console.log(twoArePositive(2, 4, -3)); // true
+
+
+
+//Page replacement algorithms: FIFO 7kyu
+// function fifo(n, referenceList) {
+//     let result = [];
+//     let lastIndex = 0;
+//     for (let i = 0; i < referenceList.length; i++) {
+//         if (i < n) {
+//             result.push(referenceList[i]);
+//         } else if (i >= n) {
+//             if (result[lastIndex] === referenceList[i]) {
+//                 lastIndex++
+//             }
+//             result[lastIndex] = referenceList[i];
+//             lastIndex++;
+//         }
+//     }
+
+//     return result;
+// }
+
+function fifo(n, referenceList) {
+    const result = new Array(n).fill(-1);
+    let oldestIndex = 0;
+    for (let i = 0; i < referenceList.length; i++) {
+        //if results arr does not include the value at index i in the reference list
+        if (!result.includes(referenceList[i])) {
+            result[oldestIndex] = referenceList[i];
+            oldestIndex = (oldestIndex + 1) % n;
+        }
+    }
+    return result;
+}
+
+//fifo(3, [1,2,3,4,5])
+fifo(4, [1, 2, 3, 3, 4, 5, 1]) // [5,1,3,4]
