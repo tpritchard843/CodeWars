@@ -60,10 +60,10 @@ function twoArePositive(a, b, c) {
 function fifo(n, referenceList) {
     const result = new Array(n).fill(-1);
     let oldestIndex = 0;
-    for (let i = 0; i < referenceList.length; i++) {
+    for (let val of referenceList) {
         //if results arr does not include the value at index i in the reference list
-        if (!result.includes(referenceList[i])) {
-            result[oldestIndex] = referenceList[i];
+        if (!result.includes(val)) {
+            result[oldestIndex] = val;
             oldestIndex = (oldestIndex + 1) % n;
         }
     }
