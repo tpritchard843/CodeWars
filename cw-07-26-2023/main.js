@@ -16,15 +16,22 @@ function powerOf4(n) {
 //rake out any items that are not a rock or gravel
 //if not a rock or gravel, change to gravel
 
+// function rakeGarden(garden) {
+//     let gardenArr = garden.split(' ');
+//     for (let i = 0; i < gardenArr.length; i++) {
+//         if (gardenArr[i] !== 'rock' && gardenArr[i] !== 'gravel') {
+//             gardenArr[i] = 'gravel';
+//         }
+//     }
+//     return gardenArr.join(' ');
+// }
+
 function rakeGarden(garden) {
-    let gardenArr = garden.split(' ');
-    for (let i = 0; i < gardenArr.length; i++) {
-        if (gardenArr[i] !== 'rock' && gardenArr[i] !== 'gravel') {
-            gardenArr[i] = 'gravel';
-        }
-    }
-    return gardenArr.join(' ');
+    return garden
+    .split(' ')
+    .map(elem => elem !== 'rock' && elem !== 'gravel' ? elem = 'gravel' : elem )
+    .join(' ');
 }
 
 var garden1 = 'slug spider rock gravel gravel gravel gravel gravel gravel gravel';
-console.log(rakeGarden(garden1))
+console.log(rakeGarden(garden1));
