@@ -9,3 +9,22 @@ function powerOf4(n) {
     //return false;
     return Number.isInteger(n) && Number.isInteger(Math.log(n) / Math.log(4));
 }
+
+
+
+//7kyu Help Suzuki rake his garden
+//rake out any items that are not a rock or gravel
+//if not a rock or gravel, change to gravel
+
+function rakeGarden(garden) {
+    let gardenArr = garden.split(' ');
+    for (let i = 0; i < gardenArr.length; i++) {
+        if (gardenArr[i] !== 'rock' && gardenArr[i] !== 'gravel') {
+            gardenArr[i] = 'gravel';
+        }
+    }
+    return gardenArr.join(' ');
+}
+
+var garden1 = 'slug spider rock gravel gravel gravel gravel gravel gravel gravel';
+console.log(rakeGarden(garden1))
