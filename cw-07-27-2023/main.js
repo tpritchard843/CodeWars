@@ -2,13 +2,9 @@
 // capitalize the first letter in every word
 
 String.prototype.toJadenCase = function() {
-    let wordsArr = this.split(' ');
-
-    for (let i = 0; i < wordsArr.length; i++) {
-        wordsArr[i] = wordsArr[i].charAt(0).toUpperCase() + wordsArr[i].slice(1);
-    }
-
-    return wordsArr.join(' ');
+    return this.split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
 };
 
 var str = "How can mirrors be real if our eyes aren't real";
