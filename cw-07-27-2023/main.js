@@ -21,3 +21,13 @@ function keepOrder(arr, val) {
 
 console.log(keepOrder([1, 2, 3, 4, 7], 5)) // i = 4
 console.log(keepOrder([1, 2, 3, 4], -1)) // i = 0
+
+
+
+//convert a number into an array of digits and reverse the order
+
+const converted = n => Array.from(String(n), Number).reverse();
+//String converts n to a string for each digit, then Number converts those digits to numbers
+//array of numbers is then reversed
+
+console.log(converted(5478))
