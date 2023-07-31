@@ -22,3 +22,21 @@ console.log(maxMultiple(37, 200)); // 185
 // 7kyu Sort Numbers
 // if nums is truthy, that is to say not falsy/null, return sorted arr. Else return an empty array.
 const solution = nums => nums ? nums.sort((a,b) => a-b) : [];
+
+
+//8kyu Lario and Muigi Pipe Problem
+
+function pipeFix(numbers){
+    let min = numbers[0];
+    let max = numbers[numbers.length - 1];
+    let val = min;
+    while (val < max) {
+        if (!numbers.includes(val)) {
+            numbers.push(val);
+        }
+        val++
+    }
+    return numbers.sort((a,b) => a-b);
+}
+
+//console.log(pipeFix([1,2,3,5,6,8,9]));
