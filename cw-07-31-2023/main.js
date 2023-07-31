@@ -17,4 +17,8 @@ function maxMultiple(divisor, bound){
     return bound - bound % divisor; //subtract remainder from bound to get our highest multiple
 }
 
-console.log(maxMultiple(37, 200)) // 185
+console.log(maxMultiple(37, 200)); // 185
+
+// 7kyu Sort Numbers
+// if nums is truthy, that is to say not falsy/null, return sorted arr. Else return an empty array.
+const solution = nums => nums ? nums.sort((a,b) => a-b) : [];
