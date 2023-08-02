@@ -53,12 +53,13 @@ const rowSumOddNumbers = n => n**3;
 // given an array of integers, return a array where the first element is the count of positives and the second element is the sum of negatives
 
 function countPositivesSumNegatives(input) {
-    let positivesCount = input.filter(num => num > 0 ).length;
-    let sumNegatives = input.reduce((acc, c) => c < 0 ? acc + c : acc + 0, 0);
     if (!input || input.length == 0) {
         return [];
+    } else {
+        let positivesCount = input.filter(num => num > 0 ).length;
+        let sumNegatives = input.reduce((acc, c) => c < 0 ? acc + c : acc + 0, 0);
+        return new Array(positivesCount, sumNegatives);
     }
-    return new Array(positivesCount, sumNegatives);
 }
 
 console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15])); // [10,-65]
