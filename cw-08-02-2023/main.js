@@ -39,4 +39,11 @@ function createPhoneNumber(numbers){
     return format;
 }
 
-console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
+console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+
+
+// 7kyu sum of odd numbers
+// Given the triangle of consecutive odd numbers(reference problem)
+// Calculate the sum of the numbers in the nth row of this triangle (starting at index 1) e.g.: (Input --> Output)
+
+const rowSumOddNumbers = n => Math.pow(n, 3);
