@@ -21,3 +21,22 @@ const sumTwoSmallestNumbers = numbers => numbers.sort((a,b) => a-b).reduce((acc,
 
 console.log(sumTwoSmallestNumbers([3, 1, 5, 6, 8]));
 console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22]));
+
+
+// 6kyu Create phone number
+// write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number
+// correct order...space after parentheses "(123) 456-7890"
+
+// function createPhoneNumber(numbers) {
+//     return `(${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`;
+// }
+
+function createPhoneNumber(numbers){
+    let format = '(xxx) xxx-xxxx';
+    numbers.forEach(num => {
+        format = format.replace('x', num);
+    })
+    return format;
+}
+
+console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
