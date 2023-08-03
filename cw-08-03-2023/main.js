@@ -102,3 +102,23 @@ function duplicateEncode(word){
 }
 
 console.log(duplicateEncode('Recede'));
+
+
+// 6kyu take a ten minute walk
+
+function isValidWalk(walk) {
+  let dx = 0;
+  let dy = 0;
+  let dt = walk.length;
+
+  if (dt !== 10) {return false};
+  for (let i = 0; i < walk.length; i++) {
+    switch (walk[i]) {
+      case 'n' : dy--; break
+      case 's' : dy++; break
+      case 'w' : dx--; break
+      case 'e' : dx++; break
+    }
+  }
+  return dx === 0 && dy === 0;
+}
