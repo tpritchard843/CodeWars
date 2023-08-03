@@ -54,3 +54,16 @@ const binaryArrayToNumber = arr => parseInt(arr.join(""), 2);
 
 console.log(binaryArrayToNumber([0,0,0,1]));
 console.log(binaryArrayToNumber([1,1,1,1]));
+
+
+//6kyu Array.diff
+// Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+// It should remove all values from list a, which are present in list b keeping their order.
+
+function arrayDiff(a, b) {
+  if (b === []) {return a};
+  if (a === []) {return []};
+  return a.filter(valA => !b.some(valB => valA === valB));
+}
+
+console.log(arrayDiff([1,2,2], [2]))
