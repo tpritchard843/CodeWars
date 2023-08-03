@@ -52,8 +52,8 @@ function partlist(arr) {
 const binaryArrayToNumber = arr => parseInt(arr.join(""), 2);
 
 
-console.log(binaryArrayToNumber([0,0,0,1]));
-console.log(binaryArrayToNumber([1,1,1,1]));
+//console.log(binaryArrayToNumber([0,0,0,1]));
+//console.log(binaryArrayToNumber([1,1,1,1]));
 
 
 //6kyu Array.diff
@@ -64,4 +64,19 @@ function arrayDiff(a, b) {
   return a.filter(val => !b.includes(val));
 }
 
-console.log(arrayDiff([1,2,2], [2]))
+//console.log(arrayDiff([1,2,2], [2]));
+
+
+// 6kyu Multiples of 3 or 5
+
+function solution(number){
+  let sum = 0;
+  for (let i = 0; i < number; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+
+console.log(solution(10))
