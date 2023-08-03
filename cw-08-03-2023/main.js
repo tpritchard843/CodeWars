@@ -33,9 +33,10 @@ class Block{
 // Elements of a pair must be in the same order as in the original array.
 
 function partlist(arr) {
-    let newArr = [];
+    let newArr;
     let results= [];
     for (let i = 0; i < arr.length; i++) {
+        newArr = []; // newArr should be empty at the start of each iteration, which will give us the unique outcomes for the results arr
         newArr.push(arr.slice(0,i).join(" ")); // first val 0 to i
         newArr.push(arr.slice(i).join(" ")); // second val i onward
         results.push(newArr);
