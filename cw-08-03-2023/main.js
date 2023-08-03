@@ -44,3 +44,13 @@ function partlist(arr) {
 
     return results;
 }
+
+
+// 7kyu Ones and Zeros
+
+//arr.join converts binary arr to a string. parseInt converts that string to an integer using base 2 (binary)
+const binaryArrayToNumber = arr => parseInt(arr.join(""), 2);
+
+
+console.log(binaryArrayToNumber([0,0,0,1]));
+console.log(binaryArrayToNumber([1,1,1,1]));
