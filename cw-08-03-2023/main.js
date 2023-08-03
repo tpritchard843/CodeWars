@@ -61,9 +61,7 @@ console.log(binaryArrayToNumber([1,1,1,1]));
 // It should remove all values from list a, which are present in list b keeping their order.
 
 function arrayDiff(a, b) {
-  if (b === []) {return a};
-  if (a === []) {return []};
-  return a.filter(valA => !b.some(valB => valA === valB));
+  return a.filter(val => !b.includes(val));
 }
 
 console.log(arrayDiff([1,2,2], [2]))
