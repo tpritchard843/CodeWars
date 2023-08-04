@@ -11,14 +11,8 @@ function numberToString(num) {
 // 7kyu Vowel Count
 
 function getCount(str) {
-    let count = 0;
     let vowels = ['a', 'e', 'i', 'o', 'u'];
-    for (let i = 0; i < str.length; i++) {
-        if (vowels.includes(str[i])) {
-            count++;
-        }
-    }
-    return count;
+    return str.split('').filter(char => vowels.includes(char)).length;
 }
 
 console.log(getCount("abracadabra"));
