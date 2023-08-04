@@ -48,7 +48,7 @@ function duplicateCount(str){
     return duplicateCharacters.length;
 }
 
-console.log(duplicateCount("aabbcde"));
+//console.log(duplicateCount("aabbcde"));
 
 
 // 7kyu Disemvowel Trolls
@@ -75,4 +75,13 @@ function highAndLow(numbers){
     // return `${high} ${low}`;
 }
 
-console.log(highAndLow('1 2 3 4 5'))
+//console.log(highAndLow('1 2 3 4 5'));
+
+
+// 8kyu Reversed strings
+
+function solution(str){
+  return str.split('').reverse().join('');
+}
+
+console.log(solution('word'));
