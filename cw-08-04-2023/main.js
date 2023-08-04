@@ -15,7 +15,7 @@ function getCount(str) {
     return str.split('').filter(char => vowels.includes(char)).length;
 }
 
-console.log(getCount("abracadabra"));
+//console.log(getCount("abracadabra"));
 
 
 // 6kyu Who Likes it?
@@ -30,3 +30,22 @@ function likes(names) {
     default: return `${names[0]}, ${names[1]}, and ${names.length - 2} others like this`
   }
 }
+
+
+// 6kyu Counting Duplicates
+//Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string
+
+function duplicateCount(str){
+    let newStr = str.toLowerCase().split('').sort();
+    let duplicateCharacters = [];
+
+    for (let i = 0; i < newStr.length; i++) {
+        // if the current elem equals the following elem && it's not already in our duplicates array
+        if (newStr[i] === newStr[i+1]  && !duplicateCharacters.includes(newStr[i])) {
+            duplicateCharacters.push(newStr[i]);
+        }
+    }
+    return duplicateCharacters.length;
+}
+
+console.log(duplicateCount("aabbcde"));
