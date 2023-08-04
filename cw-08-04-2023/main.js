@@ -68,7 +68,7 @@ function disemvowel(str) {
 
 function highAndLow(numbers){
     let numsArr = numbers.split(' ')
-    return `${Math.max(...numsArr)} ${Math.min(...numsArr)}`
+    return `${Math.max(...numsArr)} ${Math.min(...numsArr)}`;
     // let newArr = numbers.split(' ').map(num => parseInt(num, 10)).sort((a,b) => a-b);
     // let high = newArr[newArr.length-1].toString();
     // let low = newArr[0].toString();
