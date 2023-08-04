@@ -49,3 +49,28 @@ function duplicateCount(str){
 }
 
 console.log(duplicateCount("aabbcde"));
+
+
+// 7kyu Disemvowel Trolls
+// Your task is to write a function that takes a string and return a new string with all vowels removed. Y is not a vowel
+
+function disemvowel(str) {
+    const vowels = 'aeiou'
+    return str
+        .split('')
+        .filter(letter => !vowels.includes(letter.toLowerCase()))
+        .join('');
+}
+
+
+// 7kyu Highest and Lowest
+// In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+function highAndLow(numbers){
+    let newArr = numbers.split(' ').map(num => parseInt(num, 10)).sort((a,b) => a-b);
+    let high = newArr[newArr.length-1].toString();
+    let low = newArr[0].toString();
+    return `${high} ${low}`;
+}
+
+console.log(highAndLow('1 2 3 4 5'))
