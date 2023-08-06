@@ -11,6 +11,6 @@ console.log(getMiddle('test'))
 
 // 6kyu spin words 
 
-const spinWords = string => string.split(" ").map(char => char.length < 5 ? char : [...char].reverse().join("")).join(" ");
+const spinWords = string => string.split(" ").map(word => word.length < 5 ? word : [...word].reverse().join("")).join(" ");
 
 console.log(spinWords("Hey fellow warriors"));
