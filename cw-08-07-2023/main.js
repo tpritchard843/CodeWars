@@ -25,3 +25,12 @@ console.log(findEvenIndex([1,2,3,4,3,2,1])); // index 3
 //right 13, != 1 --> left + 2 = 3
 //right 10, != 3 --> left + 3 = 6
 // right 6 == left 6 --> return index 3
+
+
+// 6kyu find the unique number
+
+function findUniq(arr) {
+    for (let i =0; i < arr.length; i++) {
+        if(arr.lastIndexOf(arr[i]) == arr.indexOf(arr[i])) return arr[i];
+    }
+}
