@@ -1,4 +1,3 @@
-function gimme(triplet) {
-    let middle = triplet.slice().sort((a,b) => a-b)[1];
-    return triplet.indexOf(middle);
+function gimme(arr) {
+    return arr.indexOf([...arr].sort((a,b) => a-b)[1]);
 }
