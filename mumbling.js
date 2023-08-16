@@ -5,12 +5,15 @@
 // abcd--> A-Bb-Ccc-Dddd
 
 function accum(str) {
-  let result = [];
-	for (let i = 0; i < str.length; i++) {
-    let subStr = `${str[i].toUpperCase()}${str[i].toLowerCase().repeat(i)}`;
-    result.push(subStr);
-  }
-  return result.join('-');
+  // let result = [];
+	// for (let i = 0; i < str.length; i++) {
+  //   let subStr = `${str[i].toUpperCase()}${str[i].toLowerCase().repeat(i)}`;
+  //   result.push(subStr);
+  // }
+  // return result.join('-');
+  return [...str]
+    .map((char,i) => char.toUpperCase() + char.toLowerCase().repeat(i))
+    .join('-');
 }
 
 //Examples
