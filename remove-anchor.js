@@ -2,16 +2,20 @@
 // Take in a url
 // if there is an anchor (#) char, remove that char and anything that comes after it
 
-function removeUrlAnchor(url){
-  // split url string into an array
-  let charactersArr = url.split('');
-  // check if url includes #
-  // If anchor, cut the the array in two at that index and return first half
-  if (charactersArr.includes('#')) {
-    return charactersArr.slice(0, charactersArr.indexOf('#')).join('');
-  } else {
-    return url;
-  }
+// function removeUrlAnchor(url){
+//   // split url string into an array
+//   let charactersArr = url.split('');
+//   // check if url includes #
+//   // If anchor, cut the the array in two at that index and return first half
+//   if (charactersArr.includes('#')) {
+//     return charactersArr.slice(0, charactersArr.indexOf('#')).join('');
+//   } else {
+//     return url;
+//   }
+// }
+
+function removeUrlAnchor(url) {
+  return url.split('#')[0];
 }
 
 // Examples
