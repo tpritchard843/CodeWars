@@ -18,5 +18,12 @@ function addUserAnswer(questions) {
   return questions;
 }
 
+const addUserAnswer = questions => {
+  questions.forEach(obj => {
+    obj.usersAnswer = null;
+  })
+  return questions;
+}
+
 //addUserAnswer(questions);
 console.log(addUserAnswer(questions));
