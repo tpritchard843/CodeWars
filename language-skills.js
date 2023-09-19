@@ -7,6 +7,8 @@
 //   return myLanguages.map(language => language[0]);
 // }
 
-function myLanguages(results) {
-  return Object.keys(results).filter(r => results[r] > 59).sort((a,b) => results[b] - results[a]);
-}
+// function myLanguages(results) {
+//   return Object.keys(results).filter(r => results[r] > 59).sort((a,b) => results[b] - results[a]);
+// }
+
+const myLanguages = results => Object.keys(results).filter(r => results[r] > 59).sort((a,b) => results[b] - results[a]);
