@@ -27,3 +27,8 @@ const addUserAnswer = questions => {
 
 //addUserAnswer(questions);
 console.log(addUserAnswer(questions));
+
+
+function filterOdds(arr) {
+  return arr.filter(x => x % 2 === 0);
+}
