@@ -32,3 +32,7 @@ console.log(addUserAnswer(questions));
 function filterOdds(arr) {
   return arr.filter(x => x % 2 === 0);
 }
+
+function sortAToZ(arr) {
+  return arr.sort((a,b) => a-b);
+}
