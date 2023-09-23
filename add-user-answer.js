@@ -36,3 +36,7 @@ function filterOdds(arr) {
 function sortAToZ(arr) {
   return arr.sort((a,b) => a-b);
 }
+
+function addTwo(num) {
+  return num + 2;
+}
