@@ -40,3 +40,8 @@ function sortAToZ(arr) {
 function addTwo(num) {
   return num + 2;
 }
+
+
+function checkIfRemainder (n, divisor) {
+  return n % divisor === 0;
+}
