@@ -13,6 +13,11 @@ const cookingTime = (eggs) => {
   return batches * 5;
 }
 
+// const cookingTime = eggs => {
+//   let batches = Math.ceil(eggs/8);
+//   return batches * 5;
+// }
+
 // examples
 console.log(cookingTime(0)); // 0
 console.log(cookingTime(5)); // 5
