@@ -6,7 +6,9 @@
 
 
 function divCon(arr){
-
+  // loop through arr & check for type
+  // if type is num, add to sum. if type is string, subtract from sum
+  return arr.reduce( (acc,c) => typeof c === 'string' ?  acc - Number(c) : acc + c ,0);
 }
 
 
