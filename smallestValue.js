@@ -4,16 +4,18 @@
 // arr will always be filled with at least 1 num and no duplicates
 // 2nd param will be a string containing either 'value' or 'index'
 
-function min(arr, toReturn) {
-  // conditionals to check for the value of toReturn
-  // spread Arr values into Math.min()
-  // return either index or value depending on the val of toReturn
-  if (toReturn === 'value') {
-    return Math.min(...arr);
-  } else if (toReturn === 'index') {
-    return arr.indexOf(Math.min(...arr));
-  }
-}
+// function min(arr, toReturn) {
+//   // conditionals to check for the value of toReturn
+//   // spread Arr values into Math.min()
+//   // return either index or value depending on the val of toReturn
+//   if (toReturn === 'value') {
+//     return Math.min(...arr);
+//   } else if (toReturn === 'index') {
+//     return arr.indexOf(Math.min(...arr));
+//   }
+// }
+
+const min = (arr, toReturn) => toReturn === 'value' ? Math.min(...arr) : arr.indexOf(Math.min(...arr));
 
 // examples
 console.log(min([1,2,3,4,5], 'value'), 1);
