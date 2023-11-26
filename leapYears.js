@@ -7,14 +7,16 @@
 
 // Tested years are in range 1600 ≤ year ≤ 4000.
 
-function isLeapYear(year) {
-  // Use modulus to check for remainders
-  // Check for divisible by 400, then 100, then 4
-  if (year % 400 === 0) return true;
-  if (year % 100 === 0) return false;
-  if (year % 4 === 0) return true;
-  return false;
-}
+// function isLeapYear(year) {
+//   // Use modulus to check for remainders
+//   // Check for divisible by 400, then 100, then 4
+//   if (year % 400 === 0) return true;
+//   if (year % 100 === 0) return false;
+//   if (year % 4 === 0) return true;
+//   return false;
+// }
+
+const isLeapYear = year => (year % 100 !== 0 && year % 4 === 0) || year % 400 === 0;
 
 // Examples
 console.log(isLeapYear(2020), true);
